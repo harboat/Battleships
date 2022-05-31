@@ -15,8 +15,6 @@
     <artifactId>ships</artifactId>
     <version>0.1.1</version>
     <modules>
-        <module>rabbitmq</module>
-        <module>clients</module>
         <module>battleships</module>
         <module>placement</module>
         <module>core</module>
@@ -43,6 +41,8 @@
         <jackson-datatype-jsr310.version>2.13.2</jackson-datatype-jsr310.version>
         <spring-boot-starter-parent.version>2.6.7</spring-boot-starter-parent.version>
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
+        <clients.version>0.1.1</clients.version>
+        <rabbitmq.version>0.1.1</rabbitmq.version>
     </properties>
 
     <dependencyManagement>
@@ -69,6 +69,16 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>com.github.harboat</groupId>
+            <artifactId>clients</artifactId>
+            <version>${clients.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.harboat</groupId>
+            <artifactId>rabbitmq</artifactId>
+            <version>${rabbitmq.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -166,5 +176,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>repsy</id>
+            <name>ships-microservices</name>
+            <url>https://repo.repsy.io/mvn/maciek/ships-microservices</url>
+        </repository>
+    </repositories>
 
 </project>
