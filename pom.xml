@@ -14,15 +14,7 @@
     <groupId>com.github.harboat</groupId>
     <artifactId>ships</artifactId>
     <version>0.1.1</version>
-    <modules>
-        <module>battleships</module>
-        <module>placement</module>
-        <module>core</module>
-        <module>eureka</module>
-        <module>rooms</module>
-        <module>configuration</module>
-    </modules>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>ships</name>
     <url>https://github.com/harboat</url>
 

@@ -3,13 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>ships</artifactId>
         <groupId>com.github.harboat</groupId>
+        <artifactId>battleships-parent-pom</artifactId>
         <version>0.1.1</version>
+        <relativePath> <!-- lookup parent from repository --> </relativePath>
     </parent>
+    <groupId>com.github.harboat</groupId>
+    <artifactId>battleships</artifactId>
+    <version>0.1.1</version>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
-    <artifactId>battleships</artifactId>
+    <name>ships</name>
+    <url>https://github.com/harboat</url>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -111,4 +116,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>repsy</id>
+            <name>ships-microservices</name>
+            <url>https://repo.repsy.io/mvn/maciek/ships-microservices</url>
+        </repository>
+    </repositories>
+
 </project>
